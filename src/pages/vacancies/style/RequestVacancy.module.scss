@@ -1,0 +1,31 @@
+form {
+  height: calc(100vh - 10rem);
+  overflow: auto;
+}
+.unitInfoText {
+  margin-left: 0.375rem;
+  color: var(--color-text-soft-default);
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 400;
+}
+.amountCurrecnlyField {
+  position: relative;
+  & > div {
+    display: grid !important;
+    gap: 0 !important;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr;
+  }
+}
+.preview {
+  color: #30acd0;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 0.875rem;
+  position: absolute;
+  top: 0;
+  right: 1.5rem;
+  cursor: pointer;
+}

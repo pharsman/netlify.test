@@ -1,0 +1,40 @@
+.recommenderForm {
+  height: 100%;
+  .containersWrapper {
+    height: 100%;
+    @include flex(flex-start, flex-start, column, 1rem);
+    padding-right: 1rem;
+    padding-top: 1rem;
+    ul.experienceContainer {
+      width: 100%;
+      height: auto;
+      overflow: visible !important;
+      border-radius: 0.25rem;
+      border: 0.0625rem solid var(--color-stroke-soft-initial);
+      background: var(--color-surface-canvas-initial);
+      padding: 0.75rem 1rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 0.75rem;
+      position: relative;
+
+      .delete {
+        position: absolute;
+        right: -0.625rem;
+        top: -0.625rem;
+        cursor: pointer;
+        @include centerEl;
+        z-index: 1;
+        display: none;
+      }
+
+      &:hover {
+        border: 0.0625rem solid var(--color-stroke-soft-initial);
+        background: var(--color-surface-canvas-hovered);
+        .delete {
+          display: block;
+        }
+      }
+    }
+  }
+}

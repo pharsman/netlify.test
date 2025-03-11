@@ -1,0 +1,25 @@
+.boardContainer {
+  background: var(--color-surface-canvas-initial);
+  width: 17.5rem;
+  min-height: 47.75rem;
+  padding: 0.75rem 0.5rem;
+  border-radius: 0.75rem;
+  border: 0.0625rem solid var(--color-stroke-softer-initial);
+  @include flex(flex-start, flex-start, column, 1rem);
+
+  &.active {
+    border: 0.125rem solid #30acd0;
+    background: var(--color-surface-canvas-pressed);
+  }
+
+  & > div {
+    width: 100%;
+  }
+
+  .columTitle {
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.4875rem;
+  }
+}

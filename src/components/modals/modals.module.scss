@@ -1,0 +1,43 @@
+.drawer {
+  display: flex;
+  flex-direction: column;
+  height: 90vh;
+}
+
+.sectionContainer {
+  margin: 8px 0px;
+}
+
+.drawer > div:last-child {
+  margin-top: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.shortLine {
+  background-color: var(--color-stroke-soft-initial);
+  height: 1px;
+  width: 16px;
+}
+
+.criteriaArea {
+  border: 1px solid var(--color-stroke-soft-initial);
+  border-radius: 4px;
+  padding: 6px;
+
+  /* Remove focus styles */
+  &:focus {
+    outline: none;
+    border-color: #30acd0;
+  }
+}
+
+.tinymceWrapper {
+  height: 100%;
+
+  iframe {
+    height: 76vh;
+    margin-top: 0;
+  }
+}

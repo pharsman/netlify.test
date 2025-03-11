@@ -1,0 +1,276 @@
+.candidatesBoardContent {
+  margin-top: 2rem;
+  .selectVacancies {
+    width: 100%;
+    height: calc(100vh - 5rem);
+    border-radius: 0.5rem;
+    border: 0.0625rem solid var(--color-stroke-softer-initial);
+    background: var(--color-surface-canvas-initial);
+
+    .selectVacanciesContent {
+      width: 33.25rem;
+      margin: 10rem auto;
+    }
+
+    .selectVacanciesTitle {
+      @include flex(center, center, column, 0.5rem);
+
+      span {
+        color: var(--color-text-soft-default);
+        text-align: center;
+        font-size: 0.875rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.4375rem;
+      }
+
+      svg {
+        path {
+          stroke: #555f62;
+        }
+      }
+    }
+
+    .selectVacanciesDropdown {
+      margin-top: 1.75rem;
+    }
+  }
+
+  .candidatesBoardHeader {
+    width: 100%;
+    @include flex(center, center, row, 1rem);
+    .infoPanelCount {
+      width: 8.125rem;
+      height: 4.4375rem;
+      padding: 0.75rem 0.625rem;
+      border-radius: 0.5rem;
+      border: 0.0625rem solid #edd0f1;
+      background: rgba(223, 161, 232, 0.1);
+      @include flex(flex-start, center, row, 0.5rem);
+      overflow: hidden;
+
+      &:not(:first-child) {
+        border: 0.0625rem solid #f3efd4;
+        background: rgba(243, 241, 228, 0.1);
+      }
+
+      & > div:first-child {
+        width: 0.5rem;
+        height: 0.5rem;
+        border-radius: 50%;
+        background: #dfa1e8;
+        flex-shrink: 0;
+      }
+
+      & > div:last-child {
+        @include flex(flex-start, flex-start, column, 4px);
+        span {
+          white-space: nowrap;
+        }
+        span:first-child {
+          overflow: hidden;
+          color: var(--color-text-strong-default);
+          text-overflow: ellipsis;
+          font-size: 1rem;
+          font-style: normal;
+          font-weight: 700;
+        }
+
+        span:last-child {
+          overflow: hidden;
+          color: var(--color-text-soft-default);
+          text-overflow: ellipsis;
+          font-size: 0.75rem;
+          font-style: normal;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+
+  .candidatesBoard {
+    width: 100%;
+    .filterTabs {
+      margin-top: 2rem;
+      @include flex(center, center, row, 1rem);
+
+      .selectedFiltersDropdown {
+        position: relative;
+        .selectedFiltersDropdownLabel {
+          @include flex(flex-start, center, row, 0.5rem);
+          cursor: pointer;
+          flex-shrink: 0;
+          span {
+            color: var(--color-text-strong-default);
+            font-size: 0.875rem;
+            font-weight: 700;
+            text-transform: capitalize;
+          }
+
+          & > svg {
+            path {
+              stroke: var(--color-text-strong-default);
+            }
+          }
+        }
+
+        .selectedFiltersDropdownContent {
+          width: 16.6875rem;
+          max-height: 16.75rem;
+          border-radius: 0.5rem;
+          border: 0.0625rem solid var(--color-stroke-softer-initial);
+          background: var(--color-surface-high-initial);
+          z-index: 25;
+          position: fixed;
+
+          box-shadow: 1px 6px 8.1px 0px rgba(230, 230, 234, 0.31);
+          ul {
+            width: 100%;
+            height: 100%;
+            padding: 0.5rem;
+
+            li {
+              width: 100%;
+              padding: 0.5rem;
+              @include flex(flex-start, flex-start, row, 0.5rem);
+              cursor: pointer;
+              .checkboxContainer {
+                flex-shrink: 0;
+              }
+              span {
+                overflow: hidden;
+                white-space: nowrap;
+                color: var(--color-text-soft-default);
+                text-overflow: ellipsis;
+                font-size: 0.875rem;
+                font-weight: 400;
+                line-height: 1.25rem;
+              }
+            }
+          }
+        }
+      }
+
+      & > ul {
+        @include flex(flex-start, center, row, 0.5rem);
+        width: unset;
+
+        li {
+          border-radius: 0.5rem;
+          border: 0.0625rem solid var(--color-stroke-softer-initial);
+          background: var(--color-surface-high-initial);
+          padding: 0.25rem 0.75rem;
+          max-width: 18.25rem;
+          overflow: hidden;
+          transition: all 0.3s ease;
+          cursor: pointer;
+          position: relative;
+          @include flex(flex-start, center, row, 0.5rem);
+
+          & > div {
+            &:first-child {
+              @include flex(flex-start, left, column, 0.5rem);
+            }
+          }
+
+          &.active {
+            background: var(--color-surface-high-inverted-initial);
+            span {
+              &:first-child {
+                color: #f9fafa;
+              }
+              &:nth-child(2) {
+                color: #a5aaac;
+              }
+            }
+          }
+
+          &:hover {
+            & > div:first-child {
+              width: 84%;
+            }
+            background: var(--color-surface-high-inverted-initial);
+
+            span {
+              &:first-child {
+                color: #f9fafa;
+              }
+              &:nth-child(2) {
+                color: #a5aaac;
+              }
+            }
+          }
+
+          span {
+            transition: all 0.3s ease;
+            white-space: nowrap;
+            &:first-child {
+              overflow: hidden;
+              color: var(--color-text-strong-default);
+              text-overflow: ellipsis;
+              font-size: 0.875rem;
+              font-weight: 500;
+            }
+            &:nth-child(2) {
+              overflow: hidden;
+              color: var(--color-text-softer-default);
+              text-overflow: ellipsis;
+              font-size: 0.75rem;
+              font-weight: 400;
+            }
+          }
+        }
+      }
+    }
+
+    .board {
+      margin-top: 1.5rem;
+      width: 100%;
+      @include flex(flex-start, flex-start, row, 1.5rem);
+      overflow: auto;
+      position: relative;
+
+      .stageContainer {
+        width: 23.6875rem;
+        flex-shrink: 0;
+        min-height: 47.375rem;
+        border-radius: 0.75rem;
+        border: 1px solid var(--color-stroke-softer-initial);
+        background: var(--color-surface-canvas-initial);
+        padding: 0.75rem 1rem;
+
+        & > div {
+          min-height: 47.375rem;
+        }
+
+        & > h2 {
+          color: var(--color-text-softer-default);
+          font-size: 0.875rem;
+          font-style: normal;
+          font-weight: 500;
+        }
+
+        .noCandidates {
+          margin-top: 6.25rem;
+          text-align: center;
+
+          svg {
+            path {
+              stroke: #555f62;
+            }
+          }
+          h2 {
+            color: var(--color-text-soft-default);
+            font-size: 0.75rem;
+            font-style: normal;
+            font-weight: 400;
+          }
+        }
+
+        .candidateItem {
+          margin-top: 1rem;
+        }
+      }
+    }
+  }
+}

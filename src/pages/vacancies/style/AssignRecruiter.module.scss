@@ -1,0 +1,106 @@
+.recruitersList {
+  height: calc(100vh - 10.625rem);
+  overflow: auto;
+  li {
+    @include flex(flex-start, center, row, unset);
+
+    div.headTitle {
+      overflow: hidden;
+      & > span {
+        @include flex(flex-start, center, row, 0.5rem);
+      }
+      &:nth-child(1) {
+        width: 14.5rem;
+      }
+      &:nth-child(2) {
+        width: 7.25rem;
+      }
+      &:nth-child(3) {
+        width: 9.5rem;
+      }
+    }
+
+    &.listHead {
+      width: 100%;
+      border-radius: 0.25rem;
+      background: var(--color-surface-low-initial);
+      padding: 0.5rem;
+
+      span {
+        overflow: hidden;
+        color: var(--color-text-strong-default);
+        text-overflow: ellipsis;
+        font-size: 0.75rem;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 1.25rem;
+      }
+    }
+    &:not(listHead) {
+      margin-top: 0.5rem;
+      padding: 0.5rem 1rem;
+      border-radius: 0.25rem;
+      border: 0.0625rem solid var(--color-stroke-softer-initial);
+      background: var(--color-surface-high-initial);
+
+      &:hover {
+        border: 0.0625rem solid transparent;
+        background: var(--color-stroke-softer-initial);
+      }
+
+      span {
+        overflow: hidden;
+        color: var(--color-text-strong-default);
+        text-overflow: ellipsis;
+        font-size: 0.75rem;
+        font-style: normal;
+        font-weight: 600;
+      }
+
+      & > div {
+        &:first-child {
+          width: 15rem;
+          overflow: hidden;
+        }
+
+        &:nth-child(2) {
+          width: 6.875rem;
+        }
+        &:nth-child(3) {
+          width: 7.5rem;
+        }
+      }
+      .userInfo {
+        @include flex(flex-start, center, row, 0.75rem);
+        .avatar {
+          width: 2rem;
+          height: 2rem;
+          @include flex(center, center, row, unset);
+          overflow: hidden;
+          border-radius: 50%;
+          flex-shrink: 0;
+          img {
+            width: 100%;
+          }
+        }
+        .info {
+          @include flex(flex-start, flex-start, column, 0.5rem);
+          span {
+            &:nth-child(2) {
+              overflow: hidden;
+              color: var(--color-text-softer-default);
+              text-overflow: ellipsis;
+              font-size: 0.75rem;
+              font-weight: 400;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.actions {
+  margin-top: 1rem;
+  @include flex(center, center, row, 1rem);
+}

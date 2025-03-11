@@ -1,0 +1,17 @@
+.skillsForm {
+  height: 100%;
+
+  & > ul {
+    overflow: visible !important;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+  }
+
+  .skillsTags {
+    margin-top: 0.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+}

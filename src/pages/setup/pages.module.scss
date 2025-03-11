@@ -1,0 +1,83 @@
+.container {
+  width: 100%;
+}
+
+.centerTab {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 24px;
+}
+
+.tabContainer {
+  display: flex;
+  align-items: center;
+  background-color: var(--color-surface-lower-initial);
+  border-radius: 40px;
+  font-size: 14px;
+  border: 1px solid var(--color-stroke-soft-initial);
+}
+
+.tabLinks {
+  display: flex;
+  align-items: center;
+  padding: 12px 6px;
+  font-weight: 500;
+}
+
+.tabLink {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  padding: 12px 24px;
+  margin: 0px 6px;
+  border-radius: 50px;
+  color: var(--color-text-soft-default);
+  text-decoration: none;
+  &:hover {
+    background-color: var(--color-surface-lower-hovered);
+  }
+}
+
+.activeTab {
+  display: flex;
+  align-items: center;
+  color: var(--color-text-strong-inverted);
+  background-color: var(--color-surface-high-inverted-initial);
+  padding: 12px 24px;
+  margin: 0px 6px;
+  border-radius: 50px;
+  text-decoration: none;
+  border: 1px solid var(--color-surface-high-dark-initial);
+}
+
+.setupTabContainer {
+  background-color: var(--color-surface-lower-initial);
+  border: 1px solid var(--color-stroke-soft-initial);
+  margin: 24px 16px;
+  min-height: 80vh;
+  border-radius: 8px;
+  padding: 16px;
+  font-family: "Inter";
+}
+
+.noStages {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.noStageContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.stageCards {
+  display: flex;
+  justify-content: start;
+  flex-wrap: wrap;
+  gap: 16px;
+}

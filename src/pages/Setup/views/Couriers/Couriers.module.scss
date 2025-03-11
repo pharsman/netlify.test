@@ -1,0 +1,23 @@
+.couriersContainer {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .couriersTitle {
+        font-size: 1.125rem;
+        font-weight: 400;
+        color: #141719;
+    }
+    .headerContainer {
+        margin-top: 0.625rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .gridWrapper {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-top: 24px;
+    }
+}

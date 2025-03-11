@@ -1,163 +1,47 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
-// @font-face {
-//   font-family: "Helvetica Neue LT";
-//   src: url("/assets/fonts/Helvetica-Neue-LT-25-UltLt.ttf") format("truetype");
-//   font-weight: 300;
-//   font-style: normal;
-// }
-
-// @font-face {
-//   font-family: "Helvetica Neue LT";
-//   src: url("/assets/fonts/Helvetica-Neue-LT-35-Thin.ttf") format("truetype");
-//   font-weight: 100;
-//   font-style: normal;
-// }
-
-// @font-face {
-//   font-family: "Helvetica Neue LT";
-//   src: url("/assets/fonts/Helvetica-Neue-LT-45-Light.ttf") format("truetype");
-//   font-weight: 200;
-//   font-style: normal;
-// }
-
-// @font-face {
-//   font-family: "Helvetica Neue LT";
-//   src: url("/assets/fonts/Helvetica-Neue-LT-55-Roman.ttf") format("truetype");
-//   font-weight: 400;
-//   font-style: normal;
-// }
-
-// @font-face {
-//   font-family: "Helvetica Neue LT";
-//   src: url("/assets/fonts/Helvetica-Neue-LT-65-Medium.ttf") format("truetype");
-//   font-weight: 500;
-//   font-style: normal;
-// }
-
-// @font-face {
-//   font-family: "Helvetica Neue LT";
-//   src: url("/assets/fonts/Helvetica-Neue-LT-75-Bold.ttf") format("truetype");
-//   font-weight: 700;
-//   font-style: normal;
-// }
-
-// @font-face {
-//   font-family: "Helvetica Neue LT";
-//   src: url("/assets/fonts/Helvetica-Neue-LT-85Heavy.ttf") format("truetype");
-//   font-weight: 800;
-//   font-style: normal;
-// }
-
-// @font-face {
-//   font-family: "Helvetica Neue LT";
-//   src: url("/assets/fonts/Helvetica-Neue-LT-95-Black.ttf") format("truetype");
-//   font-weight: 900;
-//   font-style: normal;
-// }
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Inter", serif;
-  font-size: 0.798vw;
 }
 
-// GRID
+// * {
+//   input::-webkit-outer-spin-button,
+//   input::-webkit-inner-spin-button {
+//     -webkit-appearance: none;
+//     margin: 0;
+//   }
 
-.dx-header-row {
-  background-color: #eef1f1 !important;
-}
+//   input[type="number"] {
+//     -moz-appearance: textfield;
+//   }
+// }
 
-.dx-datagrid {
-  border-radius: 5px;
-  overflow: hidden;
-}
-.dx-datagrid-headers .dx-datagrid-table .dx-row > td {
-  border-bottom: none;
-  line-height: 16px;
-  font-weight: 500;
-  font-size: 14px;
-}
-
-.dx-column-indicators .dx-sort-up {
-  color: #b8c3c6 !important;
-}
-.dx-column-indicators .dx-sort-down {
-  color: #b8c3c6 !important;
+#root {
+  height: 100vh;
+  font-size: 1.125rem;
+  font-family: "Inter", sans-serif;
 }
 
-.dx-datagrid .dx-datagrid-table .dx-header-row > td {
-  padding-top: 17px;
-  padding-bottom: 17px;
+html,
+body {
+  background-color: transparent;
+  height: 100%;
 }
 
-.dx-datagrid .dx-column-indicators .dx-header-filter.dx-header-filter::after,
-.dx-datagrid .dx-column-indicators .dx-sort.dx-header-filter::after {
-  content: "";
-  position: absolute;
-  right: 10;
-  float: right !important;
+ul {
+  list-style: none;
+  list-style-type: none;
 }
 
-.dx-datagrid .dx-column-indicators .dx-header-filter.dx-header-filter::before,
-.dx-datagrid .dx-column-indicators .dx-sort.dx-header-filter::before {
-  content: url("../assets/icons/grid/filter.svg");
-  position: absolute;
-  right: 10;
-  // top: 0px;
-  // right: 0px;
+a {
+  text-decoration: none;
 }
 
-.dx-datagrid .dx-column-indicators {
-  display: inline-block;
-  vertical-align: top;
-  white-space: nowrap;
-  float: right;
+.main-container {
+  padding: 1.25rem;
+  height: 100%;
 }
 
-.dx-datagrid .dx-row > td {
-  padding: 14px 12px;
-  font-size: 14px;
-  line-height: 20px;
-}
-
-.dx-overlay-content {
-  right: 0 !important;
-}
-
-.dx-datagrid .dx-row-lines > td {
-  border-bottom: 1px solid #eef1f1;
-}
-
-.dx-column-indicators {
-  border-right: 1px solid #e1e4e5;
-}
-
-.dx-datagrid-rowsview .dx-row.dx-group-row:not(.dx-row-focused) {
-  color: #6f787b;
-  background-color: #f9fafa;
-  border-left: 3px solid #f9fafa;
-  font-weight: 400;
-}
-
-.dx-datagrid-rowsview .dx-row-focused.dx-group-row {
-  color: #6f787b;
-  background-color: #f9fafa;
-  border-left: 3px solid #f9fafa;
-  font-weight: 400;
-}
-
-.dx-datagrid-rowsview .dx-row.dx-group-row td {
-  border-bottom: none;
-}
-
-.dx-datagrid-group-closed::before,
-.dx-datagrid-group-opened::before {
-  position: absolute;
-  display: block;
-  right: 0;
-  // left: 0;
-  color: #6f787b;
-  // content: url("../assets/icons/grid/arrow.svg");
+.required {
+  color: #da1a1c;
 }

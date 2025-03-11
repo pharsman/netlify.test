@@ -1,4 +1,4 @@
-const isLocal = location.href.includes("localhost");
-const pathPrefix = isLocal ? "" : "/recruitment/oneadmin/front";
-export const blankPathPrefix = isLocal ? "" : "/recruitment/oneadmin/front";
-export default pathPrefix;
+const isLocal = location.href.includes('localhost')
+const pathPrefix = isLocal ? '' : '/vending/oneadmin/front'
+export const blankPathPrefix = isLocal ? '' : '/p/vending'
+export default pathPrefix

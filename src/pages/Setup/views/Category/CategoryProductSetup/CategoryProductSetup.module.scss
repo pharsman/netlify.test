@@ -1,0 +1,34 @@
+.categorySetupContainer {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .categorySetupTitle {
+        font-size: 1.125rem;
+        font-weight: 400;
+        color: #141719;
+    }
+    .headerContainer {
+        margin-top: 0.625rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .headerLeft {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #141719;
+            font-weight: 700;
+            font-size: 0.75rem;
+            line-height: 1rem;
+            text-transform: capitalize;
+            cursor: pointer;
+        }
+    }
+    .gridWrapper {
+        height: calc(100% - 8.125rem);
+        display: flex;
+        flex-direction: column;
+        margin-top: 1.875rem;
+    }
+}

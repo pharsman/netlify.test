@@ -1,0 +1,30 @@
+export const CREATE_CATEGORY = [
+  {
+    component: 'FormInput',
+    inputType: 'text',
+    label: 'Category Name',
+    placeholder: 'Enter Category Name',
+    required: true,
+    disabled: false,
+    value: '',
+    key: 'Name',
+    msgVisible: false,
+  },
+  {
+    component: 'FormInput',
+    inputType: 'number',
+    label: 'Category Margin',
+    placeholder: 'Enter Category Margin',
+    required: true,
+    disabled: false,
+    value: '',
+    key: 'Margin',
+    msgVisible: false,
+  },
+  {
+    component: 'FileUploader',
+    value: '',
+    key: 'Image',
+    required: true,
+  },
+]

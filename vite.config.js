@@ -1,30 +1,15 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import path from "path";
-import federation from "@originjs/vite-plugin-federation";
 
+// https://vite.dev/config/
 export default defineConfig({
-  plugins: [
-    react(),
-    { include: "**/*.jsx" },
-    federation({
-      name: "Hr",
-      filename: "remoteEntry.js",
-      remotes: {
-        // masterComponents: 'https://oneadmin.upgaming.dev/mc/assets/remoteEntry.js',
-        masterComponents:
-          "https://oneadmin.upgaming.dev/mcnew/assets/remoteEntry.js",
-      },
-      shared: ["react", "react-dom"],
-    }),
-  ],
-
+  plugins: [react()],
   css: {
     preprocessorOptions: {
       scss: {
         additionalData: `
-          @use "@/styles/_fonts.scss" as *;
-          @use "@/styles/_mixins.scss" as *;
+          @use "@/styles/_Fonts.scss" as *;
         `,
       },
     },
@@ -32,14 +17,12 @@ export default defineConfig({
     //   localsConvention: 'camelCaseOnly',
     // },
   },
-
   build: {
     modulePreload: false,
     target: "esnext",
     minify: false,
     cssCodeSplit: false,
   },
-
   resolve: {
     extensions: [".mjs", ".js", ".ts", ".jsx", ".tsx", ".json"],
     alias: {
@@ -47,4 +30,4 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-});
+})

@@ -1,23 +1,23 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react'
 
 export const useDebounce = () => {
-  const [timerID, setTimerID] = useState();
+  const [timerID, setTimerID] = useState()
 
   const setDebouncedValue = (callback, delay) => {
-    clearTimeout(timerID);
+    clearTimeout(timerID)
     setTimerID(
       setTimeout(() => {
-        callback();
+        callback()
       }, delay ?? 500)
-    );
-  };
+    )
+  }
 
   useEffect(() => {
     return () => {
-      clearTimeout(timerID);
-    };
+      clearTimeout(timerID)
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [])
 
-  return setDebouncedValue;
-};
+  return setDebouncedValue
+}

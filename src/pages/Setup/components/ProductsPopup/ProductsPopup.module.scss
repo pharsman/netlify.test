@@ -1,0 +1,38 @@
+.categoryPopupContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 1rem;
+    .categoryPopupTitle {
+        color: #141719;
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 170%;
+        vertical-align: middle;
+    }
+    .categoryPopupContent {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        margin-top: 1rem;
+
+        .fileUploaderTitle {
+            font-weight: 400;
+            font-size: 0.875rem;
+            line-height: 170%;
+            color: #141719;
+        }
+        .fileUploaderSubTitle {
+            font-weight: 400;
+            font-size: 0.75rem;
+            line-height: 170%;
+            color: #555f62;
+        }
+    }
+    .buttons {
+        margin-top: 2rem;
+        display: flex;
+        justify-content: flex-end;
+        gap: 1rem;
+    }
+}

@@ -9,7 +9,7 @@ COPY . ./
 RUN yarn install --force 
 #RUN npm install
 RUN echo build
-RUN yarn build --base=/recruitment/oneadmin/front/
+RUN yarn build --base=/vending/oneadmin/front/
 
 FROM nginx:stable-alpine AS production-stage
 COPY nginx.conf /etc/nginx/nginx.conf

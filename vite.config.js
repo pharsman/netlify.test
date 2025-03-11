@@ -8,9 +8,9 @@ export default defineConfig({
   css: {
     preprocessorOptions: {
       scss: {
-        additionalData: `
-          @use "@/style/_Fonts.scss" as *;
-        `,
+        // additionalData: `
+        //   @use "@/style/_Fonts.scss" as *;
+        // `,
       },
     },
     // modules: {
